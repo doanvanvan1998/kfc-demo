@@ -1,4 +1,4 @@
-import  {useState} from "react";
+import {useEffect, useState} from "react";
 
 // const [menu,setMenu] = useState([
 //     {
@@ -35,7 +35,15 @@ import  {useState} from "react";
 // const activeMenu = (elActive)=> {
 //     setElactive(elActive)
 // }
+
+
 export default function Header() {
+    const [countProduct, setCountProduct] = useState(0)
+    useEffect(() => {
+        const count = JSON.parse(localStorage.getItem('countProduct')) || 0
+        setCountProduct(count)
+    }, [])
+
     return (
         <div className="">
             <div className="grid grid-cols-3  py-[1rem] items-center  container">
@@ -64,8 +72,10 @@ export default function Header() {
                         <div className="text-[#000000] font-[700] text-[16px]">
                             English
                         </div>
-                        <div className="cursor-pointer">
-                            <i className="fa-solid fa-cart-shopping text-3xl"></i>
+                        <div className="cursor-pointer ralitave ">
+                            <i className="fa-solid  fa-cart-shopping text-3xl">
+                                <span className='text-[14px] font-bold'>{countProduct}</span>
+                            </i>
                         </div>
                         <div className="cursor-pointer">
                             <i className="fa-solid fa-bars text-3xl"></i>
