@@ -1,10 +1,10 @@
 import {useEffect, useState} from "react";
 import formatPrice from "../hooks/formatPrice";
-
+import {useNavigate} from "react-router-dom";
 export default function DetailProduct() {
     const [itemProduct, setItemProduct] = useState(null)
     const [carts,setCarts] = useState([])
-
+const navigate = useNavigate();
 
     const getDataFromLocalStorage = () => {
         const data = JSON.parse(localStorage.getItem('itemProduct'))
@@ -39,6 +39,7 @@ export default function DetailProduct() {
         }
         localStorage.setItem('cart', JSON.stringify(cart));
         setCarts(cart);
+        navigate('/cart')
     };
 
     return (

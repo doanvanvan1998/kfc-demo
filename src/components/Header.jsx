@@ -1,45 +1,9 @@
 import {useEffect, useRef, useState} from "react";
-
-// const [menu,setMenu] = useState([
-//     {
-//         id:1,
-//         name: 'menu1',
-//     },
-//     {
-//         id:2,
-//         name: 'menu2',
-//     },
-//     {
-//         id:3,
-//         name: 'menu2',
-//     },
-//     {
-//         id:4,
-//         name: 'menu2',
-//     },
-//     {
-//         id:5,
-//         name: 'menu4',
-//     },
-//     {
-//         id:6,
-//         name: 'menu6',
-//     },
-//     {
-//         id:7,
-//         name: 'menu7',
-//     },
-// ])
-
-// const [elActive,setElactive] = useState(1)
-// const activeMenu = (elActive)=> {
-//     setElactive(elActive)
-// }
-
-
-
-
+import { useNavigate } from "react-router-dom";
 export default function Header() {
+
+    const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) || []);
+    const navigate = useNavigate();
     const [countProduct, setCountProduct] = useState(0);
     const [items , setItems] = useState([])
     useEffect(() => {
@@ -47,7 +11,13 @@ export default function Header() {
         setCountProduct(count.length)
     }, [])
 
-
+    const goToCart = ()=> {
+        if(cart.length > 0){
+        navigate('/cart')
+        } else {
+            alert('Giỏ hàng trống')
+        }
+    }
 
     return (
         <div className="">
@@ -78,7 +48,7 @@ export default function Header() {
                             English
                         </div>
                         <div className="cursor-pointer ralitave ">
-                            <i className="fa-solid  fa-cart-shopping text-3xl">
+                            <i onClick={()=>goToCart()} className="fa-solid  fa-cart-shopping text-3xl">
                                 <span className='text-[14px] font-bold'>{countProduct}</span>
                             </i>
                         </div>
