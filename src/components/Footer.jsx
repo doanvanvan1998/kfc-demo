@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
         <div className='bg-[#202124]'>
-            <div className='container py-[2rem]'>
+            <div className='container mx-auto py-[2rem]'>
                 <div className='grid grid-cols-5 gap-[15px]'>
                     <div
                         className="flex col-span-1 justify-start text-[#ababab]  text-[14px] font-[500] items-start flex-col">
@@ -113,7 +113,7 @@ export default function Footer() {
             </div>
             <br/>
 
-            <div className='container'>
+            <div className='container mx-auto'>
                 <div className='h-[2px]  bg-[#ffffff]'>
 
                 </div>

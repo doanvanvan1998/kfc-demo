@@ -8,44 +8,56 @@ export default function Home() {
         {
             id: 1,
             name: 'Combo Vui Vẻ fvvfvfvf',
-            price: '1',
+            price: 90000,
             description: '3 Miếng Gà Rán + 1 Pepsi lon',
-            image: 'https://static.kfcvietnam.com.vn/images/items/lg/combo-vui-ve.jpg?v=3QjDZL'
+            image: 'https://static.kfcvietnam.com.vn/images/items/lg/combo-vui-ve.jpg?v=3QjDZL',
+            quantity: 1,
+            currentPrice: 90000,
         },
         {
             id: 2,
             name: 'Combo Vui Vẻ',
-            price: '1',
+            price: 90000,
             description: '3 Miếng Gà Rán + 1 Pepsi lon',
-            image: 'https://static.kfcvietnam.com.vn/images/items/lg/combo-vui-ve.jpg?v=3QjDZL'
+            image: 'https://static.kfcvietnam.com.vn/images/items/lg/combo-vui-ve.jpg?v=3QjDZL',
+            quantity: 1,
+            currentPrice: 90000,
         },
         {
             id: 3,
             name: 'Combo Vui Vẻ',
-            price: '95.000₫',
+            price: 90000,
             description: '3 Miếng Gà Rán + 1 Pepsi lon',
-            image: 'https://static.kfcvietnam.com.vn/images/items/lg/combo-vui-ve.jpg?v=3QjDZL'
+            image: 'https://static.kfcvietnam.com.vn/images/items/lg/combo-vui-ve.jpg?v=3QjDZL',
+            quantity: 1,
+            currentPrice: 90000,
         },
         {
             id: 4,
             name: 'Combo Vui Vẻ',
-            price: '95.000₫',
+            price: 90000,
             description: '3 Miếng Gà Rán + 1 Pepsi lon',
-            image: 'https://static.kfcvietnam.com.vn/images/items/lg/combo-vui-ve.jpg?v=3QjDZL'
+            image: 'https://static.kfcvietnam.com.vn/images/items/lg/combo-vui-ve.jpg?v=3QjDZL',
+            quantity: 1,
+            currentPrice: 90000,
         },
         {
             id: 5,
             name: 'Combo Vui Vẻ',
-            price: '95.000₫',
+            price: 90000,
             description: '3 Miếng Gà Rán + 1 Pepsi lon',
-            image: 'https://static.kfcvietnam.com.vn/images/items/lg/combo-vui-ve.jpg?v=3QjDZL'
+            image: 'https://static.kfcvietnam.com.vn/images/items/lg/combo-vui-ve.jpg?v=3QjDZL',
+            quantity: 1,
+            currentPrice: 90000,
         },
         {
             id: 6,
             name: 'Combo Vui Vẻ',
-            price: '95.000₫',
+            price: 90000,
             description: '3 Miếng Gà Rán + 1 Pepsi lon',
-            image: 'https://static.kfcvietnam.com.vn/images/items/lg/combo-vui-ve.jpg?v=3QjDZL'
+            image: 'https://static.kfcvietnam.com.vn/images/items/lg/combo-vui-ve.jpg?v=3QjDZL',
+            quantity: 1,
+            currentPrice: 90000,
         },
     ])
 
@@ -55,42 +67,48 @@ export default function Home() {
             name: 'Combo Vui Vẻ',
             price: '95.000₫',
             description: '3 Miếng Gà Rán + 1 Pepsi lon',
-            image: 'https://static.kfcvietnam.com.vn/images/items/lg/combo-vui-ve.jpg?v=3QjDZL'
+            image: 'https://static.kfcvietnam.com.vn/images/items/lg/combo-vui-ve.jpg?v=3QjDZL',
+            quantity: 1
         },
         {
             id: 2,
             name: 'Combo Vui Vẻ',
             price: '95.000₫',
             description: '3 Miếng Gà Rán + 1 Pepsi lon',
-            image: 'https://static.kfcvietnam.com.vn/images/items/lg/combo-vui-ve.jpg?v=3QjDZL'
+            image: 'https://static.kfcvietnam.com.vn/images/items/lg/combo-vui-ve.jpg?v=3QjDZL',
+            quantity: 1
         },
         {
             id: 3,
             name: 'Combo Vui Vẻ',
             price: '95.000₫',
             description: '3 Miếng Gà Rán + 1 Pepsi lon',
-            image: 'https://static.kfcvietnam.com.vn/images/items/lg/combo-vui-ve.jpg?v=3QjDZL'
+            image: 'https://static.kfcvietnam.com.vn/images/items/lg/combo-vui-ve.jpg?v=3QjDZL',
+            quantity: 1
         },
         {
             id: 4,
             name: 'Combo Vui Vẻ',
             price: '95.000₫',
             description: '3 Miếng Gà Rán + 1 Pepsi lon',
-            image: 'https://static.kfcvietnam.com.vn/images/items/lg/combo-vui-ve.jpg?v=3QjDZL'
+            image: 'https://static.kfcvietnam.com.vn/images/items/lg/combo-vui-ve.jpg?v=3QjDZL',
+            quantity: 1
         },
         {
             id: 5,
             name: 'Combo Vui Vẻ',
             price: '95.000₫',
             description: '3 Miếng Gà Rán + 1 Pepsi lon',
-            image: 'https://static.kfcvietnam.com.vn/images/items/lg/combo-vui-ve.jpg?v=3QjDZL'
+            image: 'https://static.kfcvietnam.com.vn/images/items/lg/combo-vui-ve.jpg?v=3QjDZL',
+            quantity: 1
         },
         {
             id: 6,
             name: 'Combo Vui Vẻ',
             price: '95.000₫',
             description: '3 Miếng Gà Rán + 1 Pepsi lon',
-            image: 'https://static.kfcvietnam.com.vn/images/items/lg/combo-vui-ve.jpg?v=3QjDZL'
+            image: 'https://static.kfcvietnam.com.vn/images/items/lg/combo-vui-ve.jpg?v=3QjDZL',
+            quantity: 1
         },
     ])
 
@@ -100,7 +118,7 @@ export default function Home() {
     }
 
     return (
-        <div className="container">
+        <div className="container mx-auto">
             <div className='text-[#000000] text-[25px] font-[700] '>
                 ƯU ĐÃI
             </div>

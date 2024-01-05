@@ -8,10 +8,10 @@ import DetailProduct from "./pages/DetailProduct.jsx";
 function App() {
   return (
       <>
-        <Router>
+        <Router  >
             <Header/>
             <Routes>
-                <Route path="/home" element={<Home/>}></Route>
+                <Route path="/" element={<Home/>}></Route>
                 <Route path="/contact" element={<Contact/>}></Route>
                 <Route path="/detail-product" element={<DetailProduct/>}></Route>
             </Routes>

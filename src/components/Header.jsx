@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
 // const [menu,setMenu] = useState([
 //     {
@@ -37,21 +37,26 @@ import {useEffect, useState} from "react";
 // }
 
 
+
+
 export default function Header() {
-    const [countProduct, setCountProduct] = useState(0)
+    const [countProduct, setCountProduct] = useState(0);
+    const [items , setItems] = useState([])
     useEffect(() => {
-        const count = JSON.parse(localStorage.getItem('countProduct')) || 0
-        setCountProduct(count)
+        const count = JSON.parse(localStorage.getItem('cart')) || [];
+        setCountProduct(count.length)
     }, [])
+
+
 
     return (
         <div className="">
-            <div className="grid grid-cols-3  py-[1rem] items-center  container">
+            <div className="grid grid-cols-3 py-[1rem] items-center mx-auto  container">
                 <div className="col-span-2 ">
                     <div className="flex justify-start items-center gap-x-[16px]">
                         <div className="w-[78px] h-[78px] overflow-hidden">
                             <img className="w-full h-full object-cover"
-                                 src="	https://static.kfcvietnam.com.vn/images/web/kfc-logo.svg?v=5.0" alt=""/>
+                                 src="https://static.kfcvietnam.com.vn/images/web/kfc-logo.svg?v=5.0" alt=""/>
                         </div>
                         <div className="text-[#000000]  hover:text-[#e4002b] cursor-pointer font-[700] text-[18px]">
                             THỰC ĐƠN
@@ -87,7 +92,7 @@ export default function Header() {
             <hr/>
 
 
-            <div className='container'>
+            <div className='container mx-auto'>
                 <div
                     className='flex py-[1rem] text-gray-600 font-[600] text-[20px] cursor-pointer justify-start items-center gap-x-[16px]'>
                     <div>

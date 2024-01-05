@@ -1,22 +1,25 @@
 import {useEffect, useState} from "react";
 import formatPrice from "../hooks/formatPrice";
+
 export default function DetailProduct() {
     const [itemProduct, setItemProduct] = useState(null)
-    const[flag, setFlag] = useState(false)
+    const [carts,setCarts] = useState([])
 
 
     const getDataFromLocalStorage = () => {
         const data = JSON.parse(localStorage.getItem('itemProduct'))
-        setItemProduct({...data, quantity: 1})
-        console.log(data,'vfvfvf')
+        setItemProduct({...data})
     }
 
     const handlePlus = () => {
-       setItemProduct({...itemProduct, quantity: itemProduct.quantity + 1})
+       setItemProduct({...itemProduct, quantity: itemProduct.quantity + 1, price: itemProduct.price + itemProduct.currentPrice})
+        localStorage.setItem('itemProduct', JSON.stringify(itemProduct))
     }
+
     const handleMinus = () => {
         if(itemProduct.quantity === 1) return
-       setItemProduct({...itemProduct, quantity: itemProduct.quantity - 1})
+       setItemProduct({...itemProduct, quantity: itemProduct.quantity - 1, price: itemProduct.price - itemProduct.currentPrice})
+        localStorage.setItem('itemProduct', JSON.stringify(itemProduct))
     }
 
     useEffect(() => {
@@ -25,16 +28,18 @@ export default function DetailProduct() {
 
 
     const addToCart = () => {
-        const cart = JSON.parse(localStorage.getItem('cart')) || []
-        const index = cart.findIndex(item => item.id === itemProduct.id)
-        if(index === -1){
-        cart.push(itemProduct)
-        }else{
-            cart[index].quantity += itemProduct.quantity
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const index = cart.findIndex(item => item.id === itemProduct.id);
+        if (index === -1) {
+            cart.push({ ...itemProduct, quantity: 1 });
+            alert('Thêm vào giỏ hàng thành công');
+        } else {
+            cart[index].quantity += 1;
+            alert('Giỏ hàng đã được cập nhật');
         }
-        localStorage.setItem('cart', JSON.stringify(cart))
-        localStorage.setItem('countProduct', JSON.stringify(cart.length))
-    }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        setCarts(cart);
+    };
 
     return (
         <div>
@@ -84,7 +89,7 @@ export default function DetailProduct() {
                                         <button
                                             onClick={addToCart}
                                             className='w-auto h-[50px] text-[#ffffff] text-[15px] font-[500] rounded-[20px] mb-[1rem] px-[10px] bg-[#E4002b]'>
-                                            Thêm vào giỏ hàng
+                                            Thêm vào giỏ hàng {formatPrice(itemProduct.price)}
                                         </button>
 
                                     </div>
@@ -94,7 +99,6 @@ export default function DetailProduct() {
                         </div>
                     )
                 }
-
             </div>
             <br/><br/>
         </div>
